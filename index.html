@@ -1,0 +1,416 @@
+<?php
+/**
+ * @var array $args Additional arguments
+ */
+?>
+<!doctype html>
+<html <?php language_attributes(); ?>>
+    <head>
+        <meta charset="<?php bloginfo('charset'); ?>"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <title>Mintx Dashboard</title>
+        <meta name='robots' content='max-image-preview:large' />
+
+        <link rel='stylesheet' id='frontend-css' href='/assets/css/frontend.min.css' media='all' />
+
+    </head>
+<body>
+<main>
+
+<!-- Header -->
+<header class="header">
+    <div class="container header__wrapper"> 
+        <a href="/" class="header__logo">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.9805 9.00868C17.9805 4.04303 22.0059 0.0175781 26.9716 0.0175781H35.9627V9.00868C35.9627 13.9743 31.9372 17.9998 26.9716 17.9998C22.0059 17.9998 17.9805 13.9743 17.9805 9.00868Z" fill="#14B890"/>
+                <path d="M8.98937 0.0175777C13.955 0.0175779 17.9805 4.04303 17.9805 9.00868L17.9805 17.9998L8.98937 17.9998C4.02372 17.9998 -0.00173439 13.9743 -0.00173417 9.00868C-0.00173396 4.04303 4.02372 0.0175775 8.98937 0.0175777Z" fill="#27E8B9"/>
+                <path d="M17.9805 26.9913C17.9805 31.957 13.955 35.9824 8.98937 35.9824L-0.00173569 35.9824L-0.0017349 26.9913C-0.00173447 22.0257 4.02372 18.0002 8.98937 18.0002C13.955 18.0002 17.9805 22.0257 17.9805 26.9913Z" fill="#14B890"/>
+                <path d="M26.9716 35.9824C22.0059 35.9824 17.9805 31.957 17.9805 26.9913L17.9805 18.0002L26.9716 18.0002C31.9372 18.0002 35.9627 22.0257 35.9627 26.9913C35.9627 31.957 31.9372 35.9824 26.9716 35.9824Z" fill="#27E8B9"/>
+            </svg>
+            <svg width="75" height="33" viewBox="0 0 75 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.101562 15.228V1.41054H3.37828L7.01031 7.25336L10.6423 1.41054H13.9191V15.228H10.8989V6.20718L7.01031 12.1092H6.93135L3.08219 6.2664V15.228H0.101562Z" fill="white"/>
+                <path d="M16.9819 3.48316V0.818359H20.1402V3.48316H16.9819ZM17.0608 15.228V4.64778H20.0612V15.228H17.0608Z" fill="white"/>
+                <path d="M22.8791 15.228V4.64778H25.8795V6.14796C26.7612 5.01625 27.7942 4.45039 28.9786 4.45039C30.1103 4.45039 30.992 4.79911 31.6236 5.49657C32.2553 6.19402 32.5711 7.15467 32.5711 8.3785V15.228H29.5708V9.32599C29.5708 8.62853 29.4129 8.09557 29.097 7.72711C28.7812 7.35864 28.3338 7.17441 27.7548 7.17441C27.1757 7.17441 26.7151 7.35864 26.373 7.72711C26.044 8.09557 25.8795 8.62853 25.8795 9.32599V15.228H22.8791Z" fill="white"/>
+                <path d="M38.7505 15.4057C37.7635 15.4057 37.0002 15.1688 36.4607 14.6951C35.9343 14.2082 35.6711 13.3857 35.6711 12.2277V7.21388H34.4078V4.64778H35.6711V1.9435H38.6715V4.64778H41.1586V7.21388H38.6715V11.7342C38.6715 12.4185 38.9939 12.7606 39.6387 12.7606C40.1651 12.7606 40.6586 12.6356 41.1192 12.3856V14.7938C40.4349 15.2017 39.6453 15.4057 38.7505 15.4057Z" fill="white"/>
+                <path d="M42.6399 15.228L47.4562 8.20085L42.8373 1.41054H46.3903L49.292 5.89135L52.2134 1.41054H55.6678L51.0488 8.16137L55.8652 15.228H52.3121L49.213 10.4906L46.0942 15.228H42.6399Z" fill="white"/>
+                <path d="M0.279216 32.4999V22.4329H1.24644V24.2291C1.64123 23.5975 2.09523 23.104 2.60845 22.7487C3.12167 22.3802 3.78623 22.196 4.60212 22.196C6.18126 22.196 7.31298 22.9198 7.99727 24.3673C8.83948 22.9198 10.0502 22.196 11.6293 22.196C12.8137 22.196 13.7546 22.5776 14.452 23.3409C15.1495 24.1041 15.4982 25.124 15.4982 26.4005V32.4999H14.531V26.5189C14.531 25.4398 14.2678 24.5976 13.7414 23.9923C13.215 23.3869 12.4847 23.0843 11.5503 23.0843C10.6687 23.0843 9.91856 23.4067 9.30007 24.0515C8.68157 24.6963 8.37232 25.5583 8.37232 26.6373V32.4999H7.4051V26.4597C7.4051 25.4201 7.13533 24.5976 6.59579 23.9923C6.0694 23.3869 5.35879 23.0843 4.46394 23.0843C3.5691 23.0843 2.80584 23.433 2.17419 24.1304C1.55569 24.8279 1.24644 25.6833 1.24644 26.6965V32.4999H0.279216Z" fill="white"/>
+                <path d="M22.1142 32.7368C21.0878 32.7368 20.1798 32.4538 19.3902 31.888C18.6138 31.3221 18.2256 30.5391 18.2256 29.539C18.2256 28.5126 18.627 27.7098 19.4297 27.1308C20.2324 26.5518 21.2984 26.2623 22.6275 26.2623C23.7592 26.2623 24.8712 26.407 25.9634 26.6965V26.2623C25.9634 25.2622 25.6739 24.4989 25.0949 23.9725C24.5159 23.4461 23.7 23.183 22.6472 23.183C21.5944 23.183 20.5417 23.4527 19.4889 23.9923L19.1336 23.1435C20.3838 22.5645 21.5747 22.275 22.7064 22.275C24.0882 22.275 25.1475 22.6434 25.8845 23.3804C26.5687 24.0646 26.9109 25.0121 26.9109 26.2228V32.4999H25.9634V30.8221C25.0554 32.0985 23.7723 32.7368 22.1142 32.7368ZM22.1735 31.8288C23.2262 31.8288 24.1211 31.5393 24.858 30.9602C25.6081 30.3681 25.9832 29.6245 25.9832 28.7297V27.5848C24.7988 27.2821 23.6605 27.1308 22.5683 27.1308C21.5155 27.1308 20.6996 27.3479 20.1206 27.7822C19.5416 28.2033 19.2521 28.7823 19.2521 29.5193C19.2521 30.2167 19.535 30.776 20.1008 31.1971C20.6799 31.6182 21.3707 31.8288 22.1735 31.8288Z" fill="white"/>
+                <path d="M30.3893 32.4999V22.4329H31.3566V25.2951C31.7645 24.3739 32.3633 23.6304 33.1528 23.0645C33.9556 22.4987 34.8438 22.2355 35.8176 22.275V23.3409H35.7189C34.4951 23.3409 33.4621 23.7883 32.6199 24.6831C31.7777 25.578 31.3566 26.8084 31.3566 28.3744V32.4999H30.3893Z" fill="white"/>
+                <path d="M38.2927 32.4999V18.0902H39.26V28.8876L45.4976 22.4329H46.7806L42.3788 26.8939L46.9188 32.4999H45.695L41.7076 27.5848L39.26 30.0522V32.4999H38.2927Z" fill="white"/>
+                <path d="M53.081 32.7368C51.7256 32.7368 50.561 32.2433 49.5872 31.2563C48.6265 30.2694 48.1462 28.9995 48.1462 27.4466C48.1462 25.9728 48.6002 24.7292 49.5082 23.7159C50.4294 22.7026 51.5677 22.196 52.9231 22.196C54.3049 22.196 55.4168 22.6961 56.259 23.6962C57.1144 24.6963 57.5421 25.953 57.5421 27.4664C57.5421 27.6243 57.5355 27.7559 57.5224 27.8612H49.1726C49.2648 29.0718 49.6859 30.0391 50.436 30.7628C51.1992 31.4735 52.0941 31.8288 53.1205 31.8288C54.4365 31.8288 55.5879 31.3024 56.5749 30.2496L57.246 30.8418C56.0748 32.1051 54.6865 32.7368 53.081 32.7368ZM49.1726 26.9926H56.4959C56.417 25.8872 56.0682 24.9595 55.4497 24.2094C54.8312 23.4593 53.9759 23.0843 52.8836 23.0843C51.8967 23.0843 51.0545 23.4593 50.357 24.2094C49.6595 24.9463 49.2648 25.8741 49.1726 26.9926Z" fill="white"/>
+                <path d="M63.7202 32.6775C62.8911 32.6775 62.2134 32.4473 61.687 31.9867C61.1607 31.5129 60.8975 30.8221 60.8975 29.9141V23.3211H59.4368V22.4329H60.8975V19.2154H61.8647V22.4329H65.398V23.3211H61.8647V29.8154C61.8647 31.1181 62.5358 31.7695 63.8781 31.7695C64.3387 31.7695 64.8322 31.6511 65.3585 31.4142V32.3222C64.8453 32.5591 64.2992 32.6775 63.7202 32.6775Z" fill="white"/>
+                <path d="M71.5249 32.6973C70.8011 32.6973 70.0642 32.5657 69.3141 32.3025C68.5772 32.0261 67.9389 31.6708 67.3994 31.2366L67.9718 30.4668C69.1167 31.3484 70.3208 31.7893 71.5841 31.7893C72.2816 31.7893 72.8606 31.6116 73.3212 31.2563C73.7818 30.901 74.0121 30.4273 74.0121 29.8351C74.0121 29.2956 73.7818 28.8876 73.3212 28.6113C72.8737 28.3349 72.2158 28.0717 71.3473 27.8217C70.8867 27.6901 70.5511 27.5914 70.3405 27.5256C70.13 27.4598 69.8339 27.3414 69.4523 27.1703C69.0706 26.9992 68.7877 26.8281 68.6035 26.6571C68.4324 26.486 68.2679 26.2623 68.11 25.9859C67.9653 25.6964 67.8929 25.374 67.8929 25.0187C67.8929 24.2028 68.2021 23.5383 68.8206 23.025C69.4391 22.4987 70.2353 22.2355 71.2091 22.2355C72.4855 22.2355 73.6765 22.6039 74.7819 23.3409L74.2687 24.1502C73.2554 23.479 72.2224 23.1435 71.1696 23.1435C70.4853 23.1435 69.9326 23.3146 69.5115 23.6567C69.0904 23.9857 68.8798 24.4134 68.8798 24.9398C68.8798 25.1503 68.9325 25.3477 69.0378 25.5319C69.1562 25.7162 69.2878 25.8675 69.4325 25.9859C69.5905 26.1044 69.8076 26.2294 70.0839 26.361C70.3735 26.4794 70.6169 26.5715 70.8143 26.6373C71.0248 26.7031 71.3144 26.7887 71.6828 26.8939C72.1829 27.0387 72.5908 27.1703 72.9067 27.2887C73.2225 27.4072 73.5581 27.5782 73.9134 27.8019C74.2818 28.0257 74.5516 28.302 74.7227 28.631C74.9069 28.9468 74.999 29.3219 74.999 29.7561C74.999 30.6378 74.6634 31.3484 73.9923 31.888C73.3343 32.4275 72.5119 32.6973 71.5249 32.6973Z" fill="white"/>
+            </svg>
+        </a>
+        <div class="header__content">
+            <div class="header__lang">
+                <div class="header__lang--top">
+                    RU
+                    <svg class="icon">
+                        <path d="M16.59 8.58984L12 13.1698L7.41 8.58984L6 9.99984L12 15.9998L18 9.99984L16.59 8.58984Z" fill="#fff"></path>
+                    </svg>
+                </div>
+                <div class="header__lang--bottom">
+                    <a href="">EN</a>
+                    <a href="">RU</a>
+                </div>
+            </div>
+            <a href="/" class="header__link header__headphones">
+                <svg class="icon">
+                    <path d="M3 22V16C3 13.6131 3.94821 11.3239 5.63604 9.63604C7.32387 7.94821 9.61305 7 12 7C14.3869 7 16.6761 7.94821 18.364 9.63604C20.0518 11.3239 21 13.6131 21 16V22" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="transparent"></path>
+                    <path d="M21 23C21 23.5304 20.7893 24.0391 20.4142 24.4142C20.0391 24.7893 19.5304 25 19 25H18C17.4696 25 16.9609 24.7893 16.5858 24.4142C16.2107 24.0391 16 23.5304 16 23V20C16 19.4696 16.2107 18.9609 16.5858 18.5858C16.9609 18.2107 17.4696 18 18 18H21V23ZM3 23C3 23.5304 3.21071 24.0391 3.58579 24.4142C3.96086 24.7893 4.46957 25 5 25H6C6.53043 25 7.03914 24.7893 7.41421 24.4142C7.78929 24.0391 8 23.5304 8 23V20C8 19.4696 7.78929 18.9609 7.41421 18.5858C7.03914 18.2107 6.53043 18 6 18H3V23Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <rect x="12" width="13" height="13" rx="6" fill="#27E8B9"></rect>
+                    <path d="M15.49 10V9.03L17.9 6.98C18.3933 6.56667 18.7333 6.22667 18.92 5.96C19.1133 5.68667 19.21 5.39667 19.21 5.09C19.21 4.75667 19.1033 4.49333 18.89 4.3C18.6767 4.1 18.4067 4 18.08 4C17.7733 4 17.4967 4.08333 17.25 4.25C17.01 4.41667 16.7467 4.68333 16.46 5.05L15.59 4.37C15.95 3.86333 16.32 3.49333 16.7 3.26C17.0867 3.02 17.5767 2.9 18.17 2.9C18.8567 2.9 19.4133 3.09333 19.84 3.48C20.2667 3.86667 20.48 4.37667 20.48 5.01C20.48 5.28333 20.4467 5.53 20.38 5.75C20.3133 5.96333 20.1933 6.18333 20.02 6.41C19.8533 6.63 19.67 6.83333 19.47 7.02C19.2767 7.2 19.0067 7.43333 18.66 7.72L17.22 8.92H20.55V10H15.49Z" fill="#03010F"></path>
+                </svg>
+            </a>
+            <a href="/" class="header__link">
+                <svg class="icon">
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="transparent"></path>
+                    <path d="M9.08984 9.00057C9.32495 8.33224 9.789 7.76868 10.3998 7.4097C11.0106 7.05073 11.7287 6.91951 12.427 7.03928C13.1253 7.15906 13.7587 7.52209 14.2149 8.0641C14.6712 8.6061 14.9209 9.29209 14.9198 10.0006C14.9198 12.0006 11.9198 13.0006 11.9198 13.0006" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M12 17H12.01" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </a>
+            <a href="/" class="header__link">
+                <svg class="icon">
+                    <path d="M18 12C18 10.4087 17.3679 8.88258 16.2426 7.75736C15.1174 6.63214 13.5913 6 12 6C10.4087 6 8.88258 6.63214 7.75736 7.75736C6.63214 8.88258 6 10.4087 6 12C6 19 3 21 3 21H21C21 21 18 19 18 12Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="transparent"></path>
+                    <path d="M13.7295 25C13.5537 25.3031 13.3014 25.5547 12.9978 25.7295C12.6941 25.9044 12.3499 25.9965 11.9995 25.9965C11.6492 25.9965 11.3049 25.9044 11.0013 25.7295C10.6977 25.5547 10.4453 25.3031 10.2695 25" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <rect x="12" width="13" height="13" rx="6" fill="#27E8B9"></rect>
+                    <path d="M18.11 10.12C16.9967 10.12 16.1033 9.71 15.43 8.89L16.29 8.09C16.81 8.70333 17.4233 9.01 18.13 9.01C18.4833 9.01 18.7733 8.91333 19 8.72C19.2267 8.52 19.34 8.25667 19.34 7.93C19.34 7.59 19.1933 7.32667 18.9 7.14C18.6133 6.94667 18.2233 6.85 17.73 6.85H17.16L16.96 6.08L18.85 4.07H15.82V3H20.45V3.92L18.5 5.92C19.1133 6.00667 19.61 6.21333 19.99 6.54C20.37 6.86 20.56 7.31667 20.56 7.91C20.56 8.55667 20.33 9.08667 19.87 9.5C19.4167 9.91333 18.83 10.12 18.11 10.12Z" fill="#03010F"></path>
+                </svg>
+            </a>
+            <a href="/" class="header__theme">
+                <svg class="icon">
+                    <g clip-path="url(#clip0_5368_7284)">
+                    <path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M12 1V3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M12 21V23" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4.21875 4.2207L5.63875 5.6407" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M18.3594 18.3594L19.7794 19.7794" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M1 12H3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M21 12H23" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4.21875 19.7794L5.63875 18.3594" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M18.3594 5.6407L19.7794 4.2207" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5368_7284">
+                        <rect width="24" height="24" fill="white"></rect>
+                    </clipPath>
+                    </defs>               
+                </svg>
+            </a>
+            <div class="header__profile">
+                <div class="header__profile--avatar">
+                    <svg class="icon">
+                        <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg> 
+                </div>
+                <div class="header__profile--content">
+                    <div class="header__profile--name">ID25471</div>
+                    <div class="header__profile--status">неверифицирован</div>
+                </div>
+                <div class="header__profile--icon">
+                    <svg class="icon">
+                        <path d="M16.59 8.58984L12 13.1698L7.41 8.58984L6 9.99984L12 15.9998L18 9.99984L16.59 8.58984Z" fill="#fff"></path>
+                    </svg>
+                </div>
+                <div class="header__profile--bottom">
+                    <a href="/">
+                        <svg class="icon">
+                            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>     
+                        Профиль
+                    </a>
+                    <a href="/">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V4.16667C2.5 3.72464 2.67559 3.30072 2.98816 2.98816C3.30072 2.67559 3.72464 2.5 4.16667 2.5H7.5" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.332 14.1673L17.4987 10.0007L13.332 5.83398" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.5 10H7.5" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Выход
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+<!-- Header -->
+
+<!-- Notification Verification -->
+<div class="top-notice">
+    <div class="container top-notice__wrapper">
+        <div class="top-notice__head">
+            Верификация не завершена
+            <svg class="icon">
+                <path d="M16.59 8.58984L12 13.1698L7.41 8.58984L6 9.99984L12 15.9998L18 9.99984L16.59 8.58984Z" fill="#03010F"></path>
+            </svg>
+        </div>
+        <div class="top-notice__top">
+            <div class="top-notice__icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 33V31C32 29.9391 31.5786 28.9217 30.8284 28.1716C30.0783 27.4214 29.0609 27 28 27H20C18.9391 27 17.9217 27.4214 17.1716 28.1716C16.4214 28.9217 16 29.9391 16 31V33" stroke="#03010F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24 23C26.2091 23 28 21.2091 28 19C28 16.7909 26.2091 15 24 15C21.7909 15 20 16.7909 20 19C20 21.2091 21.7909 23 24 23Z" stroke="#03010F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.2854 5.2532C12.6256 4.09893 11.1466 3.68849 10.0642 4.46047C7.76008 6.10378 5.75948 8.14553 4.15992 10.4955C2.10774 13.5105 0.769681 16.9535 0.247382 20.563C-0.274918 24.1725 0.0322842 27.8536 1.14565 31.3266C2.01346 34.0336 3.35324 36.5587 5.097 38.7877C5.91618 39.8349 7.45091 39.8605 8.41076 38.9406C9.37062 38.0207 9.38888 36.5046 8.59632 35.4372C7.34454 33.7512 6.3747 31.8668 5.73036 29.8568C4.84034 27.0805 4.59477 24.1379 5.01229 21.2525C5.42982 18.367 6.49945 15.6147 8.13995 13.2046C9.32761 11.4597 10.7919 9.92747 12.4702 8.66554C13.5328 7.86656 13.9451 6.40747 13.2854 5.2532Z" fill="black" fill-opacity="0.11"/>
+                    <path d="M45.5927 24C46.9222 24 48.0125 22.9196 47.8794 21.5967C47.596 18.7809 46.8161 16.0308 45.5695 13.476C43.9703 10.1982 41.645 7.32805 38.7704 5.08349C35.8958 2.83894 32.5475 1.27904 28.9798 0.522307C26.1989 -0.0675256 23.3418 -0.157323 20.5413 0.25053C19.2256 0.442129 18.4418 1.76185 18.7642 3.05167C19.0866 4.34149 20.3938 5.10966 21.7138 4.95124C23.7987 4.70102 25.916 4.79412 27.9808 5.23207C30.8328 5.837 33.5095 7.08397 35.8074 8.87825C38.1053 10.6725 39.9641 12.9669 41.2426 15.5872C42.1681 17.4841 42.7719 19.5157 43.0346 21.599C43.201 22.9181 44.2632 24 45.5927 24Z" fill="black" fill-opacity="0.11"/>
+                    <path d="M13.1345 42.6598C12.4655 43.8087 12.8506 45.2946 14.0607 45.8452C16.6367 47.0172 19.4057 47.7271 22.2407 47.9354C25.878 48.2028 29.5284 47.6376 32.9146 46.283C36.3008 44.9283 39.3337 42.8197 41.7829 40.1173C43.6919 38.011 45.2072 35.5872 46.264 32.9618C46.7605 31.7285 46.0144 30.387 44.7376 30.0166C43.4607 29.6461 42.1391 30.3892 41.6118 31.6097C40.7789 33.5373 39.633 35.3202 38.2156 36.8841C36.2576 39.0443 33.8332 40.7299 31.1263 41.8129C28.4194 42.8958 25.5013 43.3476 22.5937 43.1339C20.4886 42.9791 18.4292 42.4786 16.4966 41.6573C15.273 41.1374 13.8035 41.5109 13.1345 42.6598Z" fill="black" fill-opacity="0.11"/>
+                </svg>
+            </div>
+            <div class="top-notice__text">
+                Завершите процесс верификации, чтобы торговать, пополнять баланс и выводить средства
+            </div>
+            <div class="top-notice__top--icon">
+                <svg class="icon">
+                    <path d="M16.59 8.58984L12 13.1698L7.41 8.58984L6 9.99984L12 15.9998L18 9.99984L16.59 8.58984Z" fill="#03010F"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="top-notice__content">
+            <a class="btn top-notice__btn">
+                Узнать больше
+            </a>
+            <a class="btn-bg top-notice__btn">
+                Завершить
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Notification Verification -->
+
+
+<!-- Notification Verification Ok -->
+<div class="top-notice" style="display: none;">
+    <div class="container top-notice__wrapper">
+        <div class="top-notice__head">
+            Верификация завершена
+            <svg class="icon">
+                <path d="M16.59 8.58984L12 13.1698L7.41 8.58984L6 9.99984L12 15.9998L18 9.99984L16.59 8.58984Z" fill="#03010F"></path>
+            </svg>
+        </div>
+        <div class="top-notice__top">
+            <div class="top-notice__icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 33V31C32 29.9391 31.5786 28.9217 30.8284 28.1716C30.0783 27.4214 29.0609 27 28 27H20C18.9391 27 17.9217 27.4214 17.1716 28.1716C16.4214 28.9217 16 29.9391 16 31V33" stroke="#03010F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24 23C26.2091 23 28 21.2091 28 19C28 16.7909 26.2091 15 24 15C21.7909 15 20 16.7909 20 19C20 21.2091 21.7909 23 24 23Z" stroke="#03010F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.2854 5.2532C12.6256 4.09893 11.1466 3.68849 10.0642 4.46047C7.76008 6.10378 5.75948 8.14553 4.15992 10.4955C2.10774 13.5105 0.769681 16.9535 0.247382 20.563C-0.274918 24.1725 0.0322842 27.8536 1.14565 31.3266C2.01346 34.0336 3.35324 36.5587 5.097 38.7877C5.91618 39.8349 7.45091 39.8605 8.41076 38.9406C9.37062 38.0207 9.38888 36.5046 8.59632 35.4372C7.34454 33.7512 6.3747 31.8668 5.73036 29.8568C4.84034 27.0805 4.59477 24.1379 5.01229 21.2525C5.42982 18.367 6.49945 15.6147 8.13995 13.2046C9.32761 11.4597 10.7919 9.92747 12.4702 8.66554C13.5328 7.86656 13.9451 6.40747 13.2854 5.2532Z" fill="black" fill-opacity="0.11"/>
+                    <path d="M45.5927 24C46.9222 24 48.0125 22.9196 47.8794 21.5967C47.596 18.7809 46.8161 16.0308 45.5695 13.476C43.9703 10.1982 41.645 7.32805 38.7704 5.08349C35.8958 2.83894 32.5475 1.27904 28.9798 0.522307C26.1989 -0.0675256 23.3418 -0.157323 20.5413 0.25053C19.2256 0.442129 18.4418 1.76185 18.7642 3.05167C19.0866 4.34149 20.3938 5.10966 21.7138 4.95124C23.7987 4.70102 25.916 4.79412 27.9808 5.23207C30.8328 5.837 33.5095 7.08397 35.8074 8.87825C38.1053 10.6725 39.9641 12.9669 41.2426 15.5872C42.1681 17.4841 42.7719 19.5157 43.0346 21.599C43.201 22.9181 44.2632 24 45.5927 24Z" fill="black" fill-opacity="0.11"/>
+                    <path d="M13.1345 42.6598C12.4655 43.8087 12.8506 45.2946 14.0607 45.8452C16.6367 47.0172 19.4057 47.7271 22.2407 47.9354C25.878 48.2028 29.5284 47.6376 32.9146 46.283C36.3008 44.9283 39.3337 42.8197 41.7829 40.1173C43.6919 38.011 45.2072 35.5872 46.264 32.9618C46.7605 31.7285 46.0144 30.387 44.7376 30.0166C43.4607 29.6461 42.1391 30.3892 41.6118 31.6097C40.7789 33.5373 39.633 35.3202 38.2156 36.8841C36.2576 39.0443 33.8332 40.7299 31.1263 41.8129C28.4194 42.8958 25.5013 43.3476 22.5937 43.1339C20.4886 42.9791 18.4292 42.4786 16.4966 41.6573C15.273 41.1374 13.8035 41.5109 13.1345 42.6598Z" fill="#27E8B9"/>
+                </svg>
+
+            </div>
+            <div class="top-notice__text">
+                Все документы находятся на проверке. Обычно это занимает 1-2 дня. Мы пришлем уведомление как только проверим            </div>
+            <div class="top-notice__top--icon">
+                <svg class="icon">
+                    <path d="M16.59 8.58984L12 13.1698L7.41 8.58984L6 9.99984L12 15.9998L18 9.99984L16.59 8.58984Z" fill="#03010F"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="top-notice__content">
+            <a class="btn top-notice__btn">
+                Узнать больше
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Notification Verification Ok -->
+
+
+<div class="page">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="/" class="sidebar__link">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1V23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Счета
+        </a>
+        <a href="/" class="sidebar__link">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3H10C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        CopyTrader
+        </a>
+        <a href="/" class="sidebar__link">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14 2V8H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16 13H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16 17H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M10 9H9H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Новости
+        </a>
+        <a href="/" class="sidebar__link">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M13.7295 21C13.5537 21.3031 13.3014 21.5547 12.9978 21.7295C12.6941 21.9044 12.3499 21.9965 11.9995 21.9965C11.6492 21.9965 11.3049 21.9044 11.0013 21.7295C10.6977 21.5547 10.4453 21.3031 10.2695 21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Уведомления
+        </a>
+        <a href="/" class="sidebar__link">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M22 6L12 13L2 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Тикеты
+        </a>
+        <a href="/" class="sidebar__link">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M23 21.0009V19.0009C22.9993 18.1146 22.7044 17.2536 22.1614 16.5532C21.6184 15.8527 20.8581 15.3524 20 15.1309" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16 3.13086C16.8604 3.35116 17.623 3.85156 18.1676 4.55317C18.7122 5.25478 19.0078 6.11769 19.0078 7.00586C19.0078 7.89403 18.7122 8.75694 18.1676 9.45855C17.623 10.1602 16.8604 10.6606 16 10.8809" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Партнерка
+        </a>
+        <a href="/" class="sidebar__link">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16 2V6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M8 2V6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M3 10H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Календарь
+        </a>
+        </a>
+        <a href="/" class="sidebar__link">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.2104 15.8901C20.5742 17.3946 19.5792 18.7203 18.3123 19.7514C17.0454 20.7825 15.5452 21.4875 13.9428 21.8049C12.3405 22.1222 10.6848 22.0422 9.12055 21.5719C7.55627 21.1015 6.13103 20.2551 4.96942 19.1067C3.80782 17.9583 2.94522 16.5428 2.45704 14.984C1.96886 13.4252 1.86996 11.7706 2.169 10.1647C2.46804 8.55886 3.1559 7.05071 4.17245 5.77211C5.189 4.49351 6.50329 3.4834 8.0004 2.83008" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2V12H22Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Аналитика
+        </a>
+        <a href="/" class="sidebar__link">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7 10L12 15L17 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M12 15V3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Скачать MT5
+        </a>
+        <a href="/" class="sidebar__link">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 12H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M3 6H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M3 18H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Еще
+        </a>
+    </div>
+    <!-- Sidebar -->
+
+
+    <div class="page-content">
+
+        <!-- Content -->
+        <div class="main">
+
+            <!-- Content Tabs -->
+            <div class="main__head">
+                <h1 class="main__title">Счета</h1>
+                <div class="main__icon">
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="more-vertical">
+                        <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <div class="main__btns">
+                    <a href="/" class="btn-bg">Пополнить</a>
+                    <a href="/" class="btn">Перевод</a>
+                    <a href="/" class="btn">Вывести</a>
+                </div>
+            </div>
+            <div class="main__tabs">
+                <div class="main__tabs--item active">Счета</div>
+                <div class="main__tabs--item">Обзор</div>
+                <div class="main__tabs--item">Финансы</div>
+            </div>
+            <!-- Content Tabs -->
+
+            <div class="accounts">
+                <div class="accounts__top">
+                    <div class="accounts__title">Реальные счета</div>
+                    <div class="accounts__subtitle">Типы счетов</div>
+                    <a href="/" class="btn-bg">Открыть новый счет</a>
+                </div>
+                <div class="accounts__content">
+                    <div class="accounts__content--title">В настоящее время у вас нет счетов</div>
+                    <div class="accounts__content--text">Для того чтобы приступить к торговле:</div>
+                    <div class="accounts__items">
+                        <div class="accounts__item">
+                            <div class="accounts__item--icon">
+                                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="user-check">
+                                    <path d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M8.5 11C10.7091 11 12.5 9.20914 12.5 7C12.5 4.79086 10.7091 3 8.5 3C6.29086 3 4.5 4.79086 4.5 7C4.5 9.20914 6.29086 11 8.5 11Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M17 11L19 13L23 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
+                            Пройдите верификацию
+                        </div>
+                        <div class="accounts__item">
+                            <div class="accounts__item--icon">
+                                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="user-check">
+                                    <path d="M12 1V23" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
+                            Откройте торговый счёт
+                        </div>
+                        <div class="accounts__item">
+                            <div class="accounts__item--icon">
+                                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="user-check">
+                                    <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7 10L12 15L17 10" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M12 15V3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
+                            Скачайте MetaTrader и приступите к торговле
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Content -->
+
+        
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <div class="footer__links">
+                    <p>© 2023 MintX Markets</p>
+                    <p>Все права защищены</p>
+                </div>
+                <div class="footer__links">
+                    <a href="tel:88007777777">8 (800) 777-77-77</a>
+                    <a href="/">Договор-оферта</a>
+                </div>
+                <div class="footer__links">
+                    <a href="mailto:support@mintxmarkets.com">support@mintxmarkets.com</a>
+                    <a href="/">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer -->
+
+    </div>
+
+</div>
+
+<script src="/assets/js/frontend.min.js" id="frontend-js"></script>
+
+
+</main> <!--end page-wrap-->
+
+</body>
+</html>
