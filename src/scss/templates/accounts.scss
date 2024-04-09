@@ -1,0 +1,98 @@
+.accounts {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        a.btn-bg, a.btn {
+            min-width: 195px;
+        }
+        @include response-min(760px) {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+    }
+    &__title {
+        flex-grow: 1;
+        font-size: 20px;
+        line-height: 22px;
+        font-weight: 700;
+        width: 100%;
+        @include response-min(760px) {
+        }
+    }
+    &__subtitle {
+        font-size: 13px;
+        line-height: 1;
+        order: 1;
+        white-space: nowrap;
+        @include response-min(760px) {
+        }
+    }
+
+    &__content {
+        border: 1px solid rgba(226, 228, 228, 1);
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 32px 16px;
+        @include response-min(560px) {
+            padding: 220px 77px;
+        }
+        @include response-min(1024px) {
+            align-items: center;
+            padding: 137px 77px;
+        }
+        &--title {
+            width: 100%;
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+            padding-bottom: 5px;
+            color: $black;
+            @include response-min(1024px) {
+                text-align: center;
+            }
+        }
+        &--text {
+            color: $gray2;
+            @include response-min(1024px) {
+                text-align: center;
+            }
+        }
+    }
+    &__items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 36px;
+        padding-top: 24px;
+        @include response-min(1024px) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    &__item {
+        font-size: 16px;
+        line-height: 1.2;
+        color: $black;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $black;
+        &--icon {
+            background: $accent;
+            padding: 6px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+        }
+    }
+}

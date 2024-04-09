@@ -1,0 +1,73 @@
+.reviews {
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        @include response-min(1025px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &__item {
+        padding: 20px;
+        border-radius: 16px;
+        border: 1px solid rgba(226, 228, 228, 1);
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        &--title {
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 700;
+        }
+        &--top {
+            display: flex;
+            width: 100%;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        &--icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(226, 228, 228, 1);
+            padding: 8px;
+        }
+        &--num {
+            font-size: 28px;
+            line-height: 1;
+            color: $black;
+        }
+        &--text {
+            font-size: 14px;
+            line-height: 1.2;
+            color: $gray2;
+        }
+    }
+    &__last {
+        margin-top: 20px;
+        p {
+            font-size: 16px;
+            line-height: 1;
+            padding-bottom: 12px;
+            color: $black;
+        }
+        &--list {
+            border-radius: 16px;
+            border: 1px solid #E2E4E4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-direction: column;
+            padding: 91px 0;
+            p {
+                font-size: 14px;
+                line-height: 1;
+                color: $gray2;
+            }
+        }
+    }
+}

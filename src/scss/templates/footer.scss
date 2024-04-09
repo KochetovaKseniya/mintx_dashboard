@@ -1,0 +1,42 @@
+.footer {
+    padding: 28px 0;
+    margin-bottom: 60px;
+    @include response-min(1025px) {
+        margin-bottom: 0px;
+    }
+    &__wrapper {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        @include response-min(1024px) {
+            grid-template-columns: 3fr 1fr 1fr;
+        }
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+        &:nth-of-type(2) {
+            flex-direction: column-reverse;
+        }
+        @include response-min(1024px) {
+            align-items: flex-end;
+            &:first-of-type {
+                align-items: flex-start;
+            }
+            &:nth-of-type(2) {
+                flex-direction: column;
+            }
+        }
+        a, p {
+            color: $gray1;
+            font-size: 15px;
+            line-height: 1.2;
+        }
+        a:not([href^="tel:"]):not([href^="mailto:"]) {
+            text-decoration: underline;
+        }
+    }
+}

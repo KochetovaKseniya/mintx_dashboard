@@ -260,16 +260,14 @@ template {
   font-weight: 400;
   font-style: normal;
 }
-html, body {
-  overflow-x: hidden;
-}
-
 body {
   background: #F8F9F9;
   font-size: 14px;
   font-family: "Gotham-Pro", sans-serif;
   color: #03010F;
   min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .container {
@@ -648,6 +646,7 @@ a:hover {
   width: 100%;
   box-sizing: border-box;
   background-color: #fff;
+  z-index: 10;
 }
 @media only screen and (min-width: 1025px) {
   .sidebar {
@@ -661,6 +660,7 @@ a:hover {
     flex-direction: column;
     order: 0;
     padding: 0;
+    justify-content: flex-start;
   }
 }
 .sidebar__link {
@@ -703,6 +703,9 @@ a:hover {
 .top-notice {
   background-color: rgb(254, 242, 218);
   padding: 8px 0;
+  max-width: 1390px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .top-notice__wrapper {
   display: flex;
@@ -887,6 +890,12 @@ a:hover {
   color: #03010F;
   border-bottom: 3px solid #03010F;
 }
+.main__tabs-content {
+  display: none;
+}
+.main__tabs-content.active {
+  display: block;
+}
 
 .accounts__top {
   display: flex;
@@ -991,4 +1000,270 @@ a:hover {
   justify-content: center;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.reviews__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media only screen and (min-width: 1025px) {
+  .reviews__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.reviews__item {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgb(226, 228, 228);
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.reviews__item--title {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+}
+.reviews__item--top {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.reviews__item--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgb(226, 228, 228);
+  padding: 8px;
+}
+.reviews__item--num {
+  font-size: 28px;
+  line-height: 1;
+  color: #03010F;
+}
+.reviews__item--text {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #6B7078;
+}
+.reviews__last {
+  margin-top: 20px;
+}
+.reviews__last p {
+  font-size: 16px;
+  line-height: 1;
+  padding-bottom: 12px;
+  color: #03010F;
+}
+.reviews__last--list {
+  border-radius: 16px;
+  border: 1px solid #E2E4E4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-direction: column;
+  padding: 91px 0;
+}
+.reviews__last--list p {
+  font-size: 14px;
+  line-height: 1;
+  color: #6B7078;
+}
+
+.finance__tabs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+}
+.finance__tabs--item {
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E0E2E4;
+  color: #6B7078;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.finance__tabs--item.active {
+  color: #03010F;
+  border-color: #03010F;
+}
+.finance__tabs--content {
+  display: none;
+}
+.finance__tabs--content.active {
+  display: block;
+}
+.finance__content {
+  border: 1px solid #E2E4E4;
+  border-radius: 16px;
+}
+.finance__content.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 164px 0;
+  color: #6B7078;
+}
+.finance__content--title {
+  padding-bottom: 12px;
+  font-size: 16px;
+  line-height: 1;
+  color: #03010F;
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 1, 15, 0.5);
+  padding: 64px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+.popup.active {
+  display: flex;
+}
+@media only screen and (min-width: 1025px) {
+  .popup {
+    padding: 226px 16px;
+  }
+}
+.popup__content {
+  position: relative;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 24px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.popup__close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+.popup__close svg path {
+  transition: all 0.3s ease-in-out;
+}
+.popup__close:hover svg path {
+  stroke: #27E8B9;
+}
+
+.verififcation__step {
+  width: 100%;
+  min-width: 320px;
+  max-width: 445px;
+}
+@media only screen and (min-width: 1025px) {
+  .verififcation__step {
+    width: 445px;
+  }
+}
+.verififcation__title {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.verififcation__subtitle {
+  font-size: 12px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #6B7078;
+}
+.verififcation__start {
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.verififcation__start--item {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 36px 1fr;
+  gap: 24px;
+  position: relative;
+}
+.verififcation__start--item:after {
+  content: "";
+  display: block;
+  width: 1px;
+  background-color: #03010F;
+  height: calc(100% - 48px);
+  top: 48px;
+  left: 18px;
+  position: absolute;
+}
+.verififcation__start--item:last-of-type:after {
+  display: none;
+}
+.verififcation__start--content {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  gap: 4px;
+  letter-spacing: 0.5px;
+}
+.verififcation__start--content p, .verififcation__start--content h3, .verififcation__start--content ul {
+  margin: unset;
+  color: #03010F;
+}
+.verififcation__start--content ul {
+  padding-left: 16px;
+}
+.verififcation__start--content h3 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.verififcation__start--content p {
+  color: #6B7078;
+}
+.verififcation__start--num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #03010F;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+@media only screen and (min-width: 1025px) {
+  .verififcation__start--num {
+    width: 36px;
+    height: 36px;
+  }
 }

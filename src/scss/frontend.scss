@@ -1,0 +1,141 @@
+//reset, uncomment if you need
+@import "reset";
+
+//normalize
+@import "normalize";
+
+//fonts
+@import "fonts";
+
+//mixins
+@import "mixins";
+
+//mixins
+@import "variables";
+
+html, body {
+    // overflow-x: hidden;
+}
+body {
+    background: #F8F9F9;
+    font-size: 14px;
+    font-family: 'Gotham-Pro', sans-serif;
+    color: #03010F;
+    min-width: 320px;
+    position: relative;
+    overflow-x: hidden; 
+
+}
+
+.container {
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    @include response-min(1025px) {
+        max-width: 1390px;
+    }
+}
+
+svg.icon {
+    width: 24px;
+    height: 24px;
+}
+p {
+    margin: unset;
+}
+a {
+    text-decoration: unset;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        color: $accent;
+    }
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $accent;
+    color: $black;
+    font-size: 13px;
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+    font-weight: 400;
+    min-width: 147px;
+    height: 47px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 400;
+    &:hover {
+        color: $accent;
+    }
+    &:disabled {
+        color: $gray3;
+        border-color: $gray4;
+    }
+
+    &-bg {
+        font-weight: 400;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $black;
+        font-size: 13px;
+        line-height: 1;
+        transition: all 0.3s ease-in-out;
+        background: $accent;
+        cursor: pointer;
+        min-width: 147px;
+        height: 47px;
+        font-weight: 400;
+        border-radius: 8px;
+        &:hover {
+            background: linear-gradient(122.94deg, #27E8B9 -19.67%, #14B890 104.38%);
+            color: $black;
+        }
+        &:disabled {
+            color: $gray3;
+            background: $gray4;
+        }
+    }
+}
+
+.page {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    @include response-min(1025px) {
+        padding: 0 15px;
+        padding-top: 28px;
+        max-width: 1390px;
+        display: grid;
+        grid-template-columns: 112px 1fr;
+        gap: 32px;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        @include response(1025px) {
+            padding: 20px 16px;
+        }
+    }
+}
+
+
+
+//templates
+@import "templates/template-name-example";
+@import "templates/header";
+@import "templates/footer";
+@import "templates/sidebar";
+@import "templates/top-notice";
+@import "templates/main";
+@import "templates/accounts";
+@import "templates/reviews";
+@import "templates/finance";
+@import "templates/popup";
+@import "templates/verififcation";

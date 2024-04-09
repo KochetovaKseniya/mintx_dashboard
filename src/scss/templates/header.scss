@@ -1,0 +1,189 @@
+.header {
+    background-color: #1F1F1F;
+    padding: 10px 0;
+    display: flex;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        display: block;
+        width: 31px;
+        height: 36px;
+        svg {
+            &:last-of-type {
+                display: none;
+            }
+        }
+        @include response-min(1024px) {
+            width: 121px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            svg {
+                &:last-of-type {
+                    display: block;
+                }
+            }
+        }
+        img {
+            @include contain();
+        }
+    }
+    &__content {
+        color: #fff;
+        gap: 28px;
+        @include flexR();
+        a svg {
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+        svg path  {
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }        
+    }
+    &__headphones {
+        @include response-min(1024px) {
+            display: none;
+        }
+    }
+    &__lang {
+        font-size: 16px;
+        line-height: 1;
+        position: relative;
+        cursor: pointer;
+        &--top {
+            @include flexR();
+            height: 100%;
+        }
+        &--bottom {
+            position: absolute;
+            display: none;
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background-color: #2D2D2D;
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 16px 12px;
+            gap: 12px;
+            min-width: 30px;
+            a {
+                color: #fff;
+                text-decoration: unset;
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+        &.active {
+            .header__lang--top .icon {
+                transform: rotate(180deg);
+            }
+            .header__lang--bottom {
+                @include flexC();
+            }
+        }
+    }
+    &__profile {
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        padding: 10px 16px;
+        position: relative;
+        margin-left: 28px;
+        background-color: #2D2D2D;
+        border-radius: 8px;
+        gap: 12px;
+        @include response-min(1024px) {
+            display: flex;
+        }
+        &:before {
+            content: '';
+            left: -28px;
+            position: absolute;
+            top: -10px;
+            bottom: -10px;
+            background-color: #fff;
+            height: calc(100% + 20px);
+            width: 1px;
+            display: block;
+            opacity: 0.7;
+        }
+        &--bottom {
+            display: none;
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background-color: #2D2D2D;
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 16px 12px;
+            min-width: 130px;
+            a {
+                @include flexR();
+                color: #fff;
+                font-size: 14px;
+                line-height: 1;
+                gap: 8px;
+                text-decoration: unset;
+                &:hover {
+                    color: $accent;
+                }
+                svg path {
+                    stroke: #fff;
+                }
+            }
+        }
+        &.active {
+            .header__profile--icon {
+                svg {
+                    transform: rotate(180deg)
+                }
+            }
+            .header__profile--bottom {
+                @include flexC();
+                align-items: flex-start;
+                gap: 12px;
+
+            }
+        }
+        &--avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            background-color: #27E8B9;
+            border-radius: 8px;
+            svg path {
+                stroke: #000;
+                fill: transparent;
+            }
+        }
+        &--content {
+            @include flexC();
+            align-items: flex-start;
+            gap: 4px;
+        }
+        &--name {
+            font-size: 16px;
+            line-height: 1;
+        }
+        &--status {
+            color: #14B890;
+            font-size: 12px;
+        }
+    }
+}
