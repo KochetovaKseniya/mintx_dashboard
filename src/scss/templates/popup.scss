@@ -12,12 +12,26 @@
     justify-content: center;
     flex-direction: column;
     display: none;
-    transition: all 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; 
+    opacity: 0;
+    z-index: -1;
+    display: flex;
     &.active {
-        display: flex;
+        z-index: 100;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    @include response(1025px) {
+        padding: 0;
     }
     @include response-min(1025px) {
         padding: 226px 16px;
+    }
+    @include response-min(1360px) {
+        padding: 16px;
+        height: 100vh;
+
     }
     &__content {
         position: relative;

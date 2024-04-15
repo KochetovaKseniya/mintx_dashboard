@@ -5,7 +5,8 @@ import header from "./template/header";
 import top_notice from "./template/top-notice";
 import main_tabs from "./template/main-tabs";
 import finance from "./template/finance";
-import verififcation from "./template/verififcation";
+import verification from "./template/verification";
+import popup from "./template/popup";
 
 $(window).on("load", (e) => {
     templateName();
@@ -14,5 +15,6 @@ $(window).on("load", (e) => {
     top_notice();
     main_tabs();
     finance();
-    verififcation();
+    verification();
+    popup();
 });

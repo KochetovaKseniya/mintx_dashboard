@@ -51,6 +51,9 @@ a {
         color: $accent;
     }
 }
+button {
+    border: unset;
+}
 .btn {
     display: flex;
     align-items: center;
@@ -66,6 +69,7 @@ a {
     border-radius: 8px;
     cursor: pointer;
     font-weight: 400;
+    background-color: transparent;
     &:hover {
         color: $accent;
     }
@@ -101,6 +105,7 @@ a {
     }
 }
 
+
 .page {
     width: 100%;
     margin: 0 auto;
@@ -125,8 +130,6 @@ a {
     }
 }
 
-
-
 //templates
 @import "templates/template-name-example";
 @import "templates/header";
@@ -138,4 +141,48 @@ a {
 @import "templates/reviews";
 @import "templates/finance";
 @import "templates/popup";
-@import "templates/verififcation";
+@import "templates/verification";
+
+.margin-v0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+input {
+    &[type="radio"] {
+        width: 24px;
+        height: 24px;
+        border: 1px solid $gray4;
+        position: relative;
+        &:checked {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                visibility: visible;
+                background: #fff;
+                border: 1px solid #B5B8BC;
+                z-index: 10;
+            }
+            &::after {
+                z-index: 11;
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                visibility: visible;
+                background: $accent;
+                background-color: $accent;
+            }
+        }
+    }
+}
