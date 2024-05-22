@@ -1,7 +1,8 @@
 export default function () {
     var interval;
 
-    $('.popup-trigger').on('click', function() {
+    $('.popup-trigger').on('click', function(e) {
+        e.preventDefault();
         var targetPopupId = $(this).data('target');
         var $targetPopup = $('#' + targetPopupId);
         

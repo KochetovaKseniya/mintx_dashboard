@@ -1,5 +1,5 @@
 .popup {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -8,9 +8,7 @@
     background: rgba(3, 1, 15, 0.5);
     padding: 64px 16px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
     display: none;
     transition: opacity 0.3s ease-in-out;
     pointer-events: none; 
@@ -18,19 +16,23 @@
     z-index: -1;
     display: flex;
     &.active {
+        overflow-y: scroll;
         z-index: 100;
         opacity: 1;
         pointer-events: auto;
     }
     @include response(1025px) {
-        padding: 0;
+        padding: 120px 0;
     }
     @include response-min(1025px) {
         padding: 226px 16px;
+        min-height: 100vh;
+        height: 100%;
     }
     @include response-min(1360px) {
-        padding: 16px;
         height: 100vh;
+        min-height: 100vh;
+        height: 100%;
 
     }
     &__content {
@@ -39,6 +41,7 @@
         background-color: #fff;
         border-radius: 24px;
         width: fit-content;
+        height: fit-content;
     }
     &__close {
         position: absolute;

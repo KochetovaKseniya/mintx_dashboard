@@ -9,6 +9,7 @@
         @include response(1025px) {
             max-width: calc(100% - 64px);            
             width: fit-content;
+            box-sizing: border-box;
             &.wide {
                 width: fit-content;
                 max-width: calc(100% - 64px);            

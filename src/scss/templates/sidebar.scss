@@ -16,6 +16,7 @@
     background-color: #fff;
     z-index: 10;
     @include response-min(1025px) {
+        margin-top: 0;
         background-color: unset;
         border-radius: unset;
         box-shadow: unset;
@@ -46,6 +47,17 @@
         &:last-of-type {
             display: flex;
         }
+        svg {
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+        svg {
+            display: none;
+            &.mob {
+                display: block;
+            }
+        }
         @include response-min(1025px) {
             display: flex;
             color: $black;
@@ -56,12 +68,14 @@
             &:last-of-type {
                 display: none;
             }
+            svg {
+                display: block;
+                &.mob {
+                    display: none;
+                }
+            }
         }
-        svg {
-            width: 24px;
-            height: 24px;
-            display: block;
-        }
+
         &:hover,
         &.active {
             color: $black;

@@ -1,0 +1,63 @@
+.referals {
+    &__top {
+        
+    }
+    &__tab {
+        border: 2px solid #E2E4E4;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        width: fit-content;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        cursor: pointer;
+        color: #6B7078;
+        &.active,
+        &:hover {
+            color: #03010F;
+            border-color: #03010F;
+        }
+    }
+    input {
+        border-radius: 8px;
+        border: 1px solid #B5B8BC;
+        padding: 12px 14px;
+        font-size: 14px;
+        color: #03010F;
+        width: 100%;
+        max-width: 300px;
+        @include response-min(1425px) {
+            width: 300px;
+        }
+    }
+    &__user {
+        
+        position: relative;
+        &--arrow {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        p {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            background-color: #F8F8F8;
+            border-radius: 8px;
+            border: 1px solid #E2E4E4;
+            padding: 8px;
+            position: relative;   
+            white-space: nowrap;
+            svg {
+                margin-right: 6px;
+            }     
+        }
+    }
+    @include response(1025px) {
+        border-radius: 0 0 16px 16px;
+        max-width: 100%;
+    }
+}

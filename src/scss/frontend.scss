@@ -19,11 +19,11 @@ html, body {
 body {
     background: #F8F9F9;
     font-size: 14px;
-    font-family: 'Gotham-Pro', sans-serif;
     color: #03010F;
     min-width: 320px;
     position: relative;
     overflow-x: hidden; 
+    font-family: 'GothamPro', sans-serif;
 
 }
 
@@ -70,6 +70,7 @@ button {
     cursor: pointer;
     font-weight: 400;
     background-color: transparent;
+    font-family: 'GothamPro-Medium', sans-serif;
     &:hover {
         color: $accent;
     }
@@ -94,6 +95,7 @@ button {
         height: 47px;
         font-weight: 400;
         border-radius: 8px;
+        font-family: 'GothamPro-Medium', sans-serif;
         &:hover {
             background: linear-gradient(122.94deg, #27E8B9 -19.67%, #14B890 104.38%);
             color: $black;
@@ -114,7 +116,7 @@ button {
     flex-direction: column;
     @include response-min(1025px) {
         padding: 0 15px;
-        padding-top: 28px;
+        padding-top: 20px;
         max-width: 1390px;
         display: grid;
         grid-template-columns: 112px 1fr;
@@ -130,6 +132,10 @@ button {
     }
 }
 
+* {
+    box-sizing: border-box;
+}
+
 //templates
 @import "templates/template-name-example";
 @import "templates/header";
@@ -142,6 +148,14 @@ button {
 @import "templates/finance";
 @import "templates/popup";
 @import "templates/verification";
+@import "templates/notice-popup";
+@import "templates/trading-accounts";
+@import "templates/refill-ok";
+@import "templates/account";
+@import "templates/partners";
+@import "templates/conditions";
+@import "templates/partners-calc";
+@import "templates/referals";
 
 .margin-v0 {
     margin-top: 0;
@@ -185,4 +199,13 @@ input {
             }
         }
     }
+}
+
+h1,h2,h3,h4,h5, h6, .accounts__title,
+.accounts__content--title, .reviews__item--title, .reviews__item--num, .reviews__last p,
+.accounts__item,
+.trading-accounts__name, .finance__content.empty p, .refill-ok__item--name, .refill-ok__item--price, 
+.conditions__bottom p, .conditions__benefits--item p, .conditions__text h4,
+.conditions__referal--title, .partners__calc p, .partners__calc--reward-price {
+    font-family: 'GothamPro-Medium', sans-serif;
 }

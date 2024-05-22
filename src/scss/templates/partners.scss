@@ -1,0 +1,118 @@
+.partners {
+    &-review {
+        display: flex;
+        // align-items: center;
+        flex-direction: column;
+        &-left {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__top {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            @include response(1024px) {
+                flex-direction: column;
+            }
+        }
+        &__bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 16px;
+            background-color: #DFFCF5;
+            border-radius: 12px;
+            gap: 16px;
+            margin-top: 30px;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: #E2E4E4;
+                position: absolute;
+                top: -20px;
+            }
+        }
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+           @include response(1024px) {
+                flex-direction: column;
+                width: 100%;
+                div, a {
+                    width: 100%;
+                }
+            }
+            &--item {
+                border: 1px solid #27E8B9;
+                padding: 14px 16px;
+                color: #6B7078;
+                border-radius: 8px;
+
+            }
+        }
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        gap: 20px;
+        @include response(1024px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &--select {
+            width: 270px;
+        }
+        &.stats {
+            padding-bottom: unset;
+            @include response(1024px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        &:first-of-type {
+            margin-right: auto;
+        }
+        &:not(:first-of-type) {
+            div:first-of-type {
+                font-size: 18px;
+            }
+        }
+        span {
+            width: 70px;
+            height: 5px;
+            background-color: #27E8B9;
+            display: block;
+            border-radius: 100px;
+        }
+        &:nth-of-type(3) {
+            span {
+                height: 8px;
+            }
+        }
+        &:nth-of-type(4) {
+            span {
+                height: 10px;
+            }
+        }
+        &:nth-of-type(5) {
+            span {
+                height: 12px;
+            }
+        }
+    }
+}

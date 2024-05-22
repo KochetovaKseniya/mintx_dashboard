@@ -1,11 +1,13 @@
 .finance {
-    @include response-min(1025px) {
-    }
+
     &__tabs {
         display: flex;
         align-items: center;
         gap: 12px;
         padding-bottom: 16px;
+        @include response(1025px) {
+            overflow-x: scroll;
+        }
         &--item {
             padding: 12px 16px;
             border-radius: 8px;
@@ -45,6 +47,187 @@
             font-size: 16px;
             line-height: 1;
             color: $black;
+        }
+    }
+    &__refill {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        border-radius: 16px;
+        border: 1px solid rgb(226, 228, 228);
+        gap: 16px;
+
+        &--item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            max-width: 424px;
+            width: 100%;
+        }
+        &--select {
+            border-radius: 8px;
+            border: 1px solid $gray3;
+            padding: 10px 12px;
+            width: 100%;
+            font-size: 14px;
+            letter-spacing: 0.6px;
+            box-sizing: border-box;
+            color: $black;
+            border-color: $gray2;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.59 0.589844L6 5.16984L1.41 0.589844L0 1.99984L6 7.99984L12 1.99984L10.59 0.589844Z' fill='%23B5B8BC'/%3E%3C/svg%3E%0A");
+            background-size: 12px;
+            background-position: 98% 50%;
+            background-repeat: no-repeat;
+            position: relative;
+            &:focus {
+                color: $black;
+                border-color: $gray2;
+            }
+            &.active {
+                .finance__refill--select--content {
+                    display: flex;
+                }
+            }
+            &-title {
+                font-size: 14px;
+                line-height: 1.2;
+                color: #03010F;
+                padding-right: 24px;
+            }
+            &--content {
+                position: absolute;
+                display: none;
+                transition: all 0.3s ease-in-out;
+                flex-direction: column;
+                background-color: #fff;
+                border-radius: 8px;
+                border: 1px solid $gray3;
+                font-size: 14px;
+                letter-spacing: 0.6px;
+                box-sizing: border-box;
+                color: $black;
+                border-color: $gray2;
+                left: 0;
+                top: calc(100% + 8px);
+
+                z-index: 3;
+                box-shadow: 0px 8px 12px -8px #24292814;
+                border: 1px solid #E0E2E4;
+                .finance__refill--select--row {
+                    padding: 11px 16px;
+                    padding-right: 24px;
+                    &:hover {
+                        background-color: #F8F8F8;
+                    }
+                }
+            }
+            &--row {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-size: 14px;
+                line-height: 1.2;
+                white-space: nowrap;
+                gap: 8px;
+                font-weight: 500;
+                p {
+                    gap: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #14B890;
+                    span {
+                        color: #fff;
+                        background-color: #27E8B9;
+                        border-radius: 6px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-transform: uppercase;
+                        flex-shrink: 0;
+                        width: 24px;
+                        height: 24px;
+                        @include response(1024px) {
+                            display: none;
+                        }   
+                    }
+                }
+                span {
+                    color: #6B7078;   
+                    font-weight: 400;
+                    @include response(1024px) {
+                        display: none;
+                    }   
+                }
+                @include response(1025px) {
+                    font-size: 11px;
+                }
+            }
+        }
+        &--title {
+            margin-bottom: 16px;
+        }
+        &--subtitle {
+            font-size: 14px;
+            line-height: 1.2;
+            color: #03010F;
+        }
+
+        &--input {
+            border-radius: 8px;
+            border: 1px solid #B5B8BC;
+            color: #B5B8BC;
+            padding: 10px 12px;
+            width: 100%;
+            font-size: 14px;
+            letter-spacing: 0.6px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+        }
+        &--list {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            @include response(1025px) {
+                flex-wrap: wrap;
+            }
+        }
+        &--card {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px;
+            border-radius: 12px;
+            border: 2px solid #E2E4E4;
+            cursor: pointer;
+            position: relative;
+            @include response(1025px) {
+                width: 100%;
+            }
+            &.active,
+            &:hover {
+                border-color: #27E8B9;
+            }
+            &.active {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='20' rx='10' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM13.7071 8.70711C14.0976 8.31658 14.0976 7.68342 13.7071 7.29289C13.3166 6.90237 12.6834 6.90237 12.2929 7.29289L9 10.5858L7.70711 9.29289C7.31658 8.90237 6.68342 8.90237 6.29289 9.29289C5.90237 9.68342 5.90237 10.3166 6.29289 10.7071L8.29289 12.7071C8.68342 13.0976 9.31658 13.0976 9.70711 12.7071L13.7071 8.70711Z' fill='%2303010F'/%3E%3C/svg%3E%0A");
+                    right: -10px;
+                    top: -10px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        &--btn {
+            width: 100%;
+            max-width: 424px;
         }
     }
 }

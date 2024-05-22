@@ -21,6 +21,11 @@
         color: $black;
         letter-spacing: 1px;
         margin: 0;
+        display: flex;
+        align-items: center;
+        svg {
+            margin-right: 6px;
+        }
     }
     &__icon {
         display: flex;
@@ -78,12 +83,19 @@
         gap: 20px;
         border-bottom: 1px solid $gray4;
         margin-bottom: 20px;
+        @include response(1024px) {
+            overflow-x: scroll;
+        }
         &--item {
             font-size: 16px;
             line-height: 1;
             color: $gray2;
             padding-bottom: 12px;
             cursor: pointer;
+            border-radius: 2px;
+            @include response(1024px) {
+                white-space: nowrap;
+            }
             &.active {
                 color: $black;
                 border-bottom: 3px solid $black;

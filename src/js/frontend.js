@@ -7,6 +7,8 @@ import main_tabs from "./template/main-tabs";
 import finance from "./template/finance";
 import verification from "./template/verification";
 import popup from "./template/popup";
+import accounts from "./template/accounts";
+import account from "./template/account";
 
 $(window).on("load", (e) => {
     templateName();
@@ -17,4 +19,6 @@ $(window).on("load", (e) => {
     finance();
     verification();
     popup();
+    accounts();
+    account();
 });

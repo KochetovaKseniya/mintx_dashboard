@@ -1,0 +1,280 @@
+.account {
+    &__head {
+        padding: 20px;
+        box-sizing: border-box;
+        border: 1px solid #E2E4E4;
+        border-radius: 16px;
+        margin-bottom: 20px;
+    }
+    &__top {
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #E2E4E4;
+        @include response(760px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            
+        }
+    }
+    &__btns {
+        @include response(760px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            width: 100%;
+            a {
+                width: 100%;
+            }
+        }
+    }
+    &__name {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 20px;
+        font-weight: 700;
+        span {
+            font-size: 28px;
+            line-height: 1;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $accent;
+            color: #fff;
+        }
+    }
+    &__benefits {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        padding: 0 4px;
+        @include response(760px) {
+            flex-direction: column;
+        }
+        &--item {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 8px;
+            span {
+                color: $gray2;
+                font-size: 12px;
+            }
+            p {
+                color: $black;
+                font-size: 14px;
+                line-height: 1;
+            }
+        }
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+        @include response(760px) {
+            gap: 12px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &--part {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            @include response(760px) {
+                gap: 12px;
+                flex-direction: column;
+                width: 100%;
+                align-items: flex-start;
+            }
+            &:last-of-type {
+                .account__bottom--item:last-of-type {
+                    width: 80px;
+                    @include response(760px) {
+                        width: 100%;
+                    }
+                    input {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+        &--item {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 162px;
+            width: fit-content;
+            @include response(760px) {
+                width: 100%;
+                max-width: 100%;
+                flex-wrap: nowrap;
+                align-items: center;
+            }
+
+            span {
+                color: $gray2;
+                font-size: 12px;
+                width: 100%;
+                padding-bottom: 6px;
+                @include response(760px) {
+                    width: fit-content;
+                    min-width: 102px;
+                    padding: 0 10px 0 0;
+                }
+            }
+            p {
+                color: $black;
+                font-size: 14px;
+                line-height: 1;
+            }
+            input {
+                width: 107px;
+                border: unset !important;
+                @include response(760px) {
+                    flex-grow: 1;
+                }
+            }
+            div {
+                margin: 0 4px;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    // Open account
+    &__choise {
+        cursor: pointer;
+        border: 2px solid #E2E4E4;
+        &.active,
+        &:hover {
+            border-color: $accent;
+        }
+    }
+    &__btn-next {
+        width: 171px;
+    }
+    // Step 2
+    &__step {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: calc(100% - 32px);
+        @include response(1025px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+    &__form {
+        width: 313px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+        &--item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            input, select {
+                border-radius: 8px;
+                border: 1px solid $gray3;
+                color: $gray3;
+                padding: 10px 12px;
+                width: 100%;
+                font-size: 14px;
+                letter-spacing: 0.6px;
+                box-sizing: border-box;
+                height: 46px;
+                &:focus {
+                    color: $black;
+                    border-color: $gray2;
+                }
+            }
+            select {
+                height: 46px;
+                color: $black;
+                border-color: $gray2;
+                background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.59 0.589844L6 5.16984L1.41 0.589844L0 1.99984L6 7.99984L12 1.99984L10.59 0.589844Z' fill='%23B5B8BC'/%3E%3C/svg%3E%0A");
+                background-size: 12px;
+                background-position: 98% 50%;
+                background-repeat: no-repeat;
+            }
+            label {
+                font-size: 10px;
+                line-height: 1;
+                color: $gray2;
+                margin-left: 8px;
+            }
+            p {
+                margin-left: 8px;
+                font-size: 10px;
+                line-height: 1.2;
+                color: #6B7078;
+                &.error {
+                    color: $red;
+                }
+            }
+        }
+    }
+    &__data {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        height: 100%;
+        position: relative;
+        border-left: 1px solid #E2E4E4;
+        width: 312px;
+        @include response(1025px) {
+            border: unset;
+            padding: unset;
+            width: 100%;
+            max-width: 312px;
+        }
+        .trading-accounts__slogan {
+            text-align: left;
+        }
+        &--item {
+            align-items: flex-start;
+            border: unset;
+        }
+    }
+}
+.input-visible {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("data:image/svg+xml, %3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_7734_4048)'%3E%3Cpath d='M11.9613 11.9603C10.8217 12.829 9.43404 13.3103 8.0013 13.3337C3.33464 13.3337 0.667969 8.00034 0.667969 8.00034C1.49723 6.45494 2.64739 5.10475 4.0413 4.04034M6.6013 2.82701C7.06019 2.7196 7.53001 2.6659 8.0013 2.66701C12.668 2.66701 15.3346 8.00034 15.3346 8.00034C14.93 8.75741 14.4473 9.47017 13.8946 10.127M9.41464 9.41368C9.23154 9.61017 9.01074 9.76778 8.7654 9.87709C8.52007 9.9864 8.25524 10.0452 7.9867 10.0499C7.71815 10.0547 7.45141 10.0053 7.20238 9.90467C6.95334 9.80408 6.72712 9.65436 6.5372 9.46444C6.34728 9.27453 6.19756 9.0483 6.09697 8.79927C5.99639 8.55023 5.94699 8.28349 5.95172 8.01495C5.95646 7.74641 6.01524 7.48157 6.12455 7.23624C6.23387 6.99091 6.39147 6.77011 6.58797 6.58701' stroke='%23B5B8BC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M0.667969 0.666992L15.3346 15.3337' stroke='%23B5B8BC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_7734_4048'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &.active {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cg clip-path='url(%23clip0_8316_5862)'%3E%3Cpath d='M11.9613 11.9603C10.8217 12.829 9.43404 13.3103 8.0013 13.3337C3.33464 13.3337 0.667969 8.00034 0.667969 8.00034C1.49723 6.45494 2.64739 5.10475 4.0413 4.04034M6.6013 2.82701C7.06019 2.7196 7.53001 2.6659 8.0013 2.66701C12.668 2.66701 15.3346 8.00034 15.3346 8.00034C14.93 8.75741 14.4473 9.47017 13.8946 10.127M9.41464 9.41368C9.23154 9.61017 9.01074 9.76778 8.7654 9.87709C8.52007 9.9864 8.25524 10.0452 7.9867 10.0499C7.71815 10.0547 7.45141 10.0053 7.20238 9.90467C6.95334 9.80408 6.72712 9.65436 6.5372 9.46444C6.34728 9.27453 6.19756 9.0483 6.09697 8.79927C5.99639 8.55023 5.94699 8.28349 5.95172 8.01495C5.95646 7.74641 6.01524 7.48157 6.12455 7.23624C6.23387 6.99091 6.39147 6.77011 6.58797 6.58701' stroke='%2303010F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M0.667969 0.666992L15.3346 15.3337' stroke='%2303010F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_8316_5862'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    }
+}
+.input-edit {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_8316_5865)'%3E%3Cpath d='M11.332 1.99955C11.5071 1.82445 11.715 1.68556 11.9438 1.5908C12.1725 1.49604 12.4177 1.44727 12.6654 1.44727C12.913 1.44727 13.1582 1.49604 13.387 1.5908C13.6157 1.68556 13.8236 1.82445 13.9987 1.99955C14.1738 2.17465 14.3127 2.38252 14.4074 2.61129C14.5022 2.84006 14.551 3.08526 14.551 3.33288C14.551 3.58051 14.5022 3.8257 14.4074 4.05448C14.3127 4.28325 14.1738 4.49112 13.9987 4.66622L4.9987 13.6662L1.33203 14.6662L2.33203 10.9996L11.332 1.99955Z' stroke='%23B5B8BC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_8316_5865'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A"); 
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &.active {
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_8316_5865)'%3E%3Cpath d='M11.332 1.99955C11.5071 1.82445 11.715 1.68556 11.9438 1.5908C12.1725 1.49604 12.4177 1.44727 12.6654 1.44727C12.913 1.44727 13.1582 1.49604 13.387 1.5908C13.6157 1.68556 13.8236 1.82445 13.9987 1.99955C14.1738 2.17465 14.3127 2.38252 14.4074 2.61129C14.5022 2.84006 14.551 3.08526 14.551 3.33288C14.551 3.58051 14.5022 3.8257 14.4074 4.05448C14.3127 4.28325 14.1738 4.49112 13.9987 4.66622L4.9987 13.6662L1.33203 14.6662L2.33203 10.9996L11.332 1.99955Z' stroke='%2303010F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_8316_5865'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+}
