@@ -630,7 +630,7 @@ button {
 .footer__links {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   align-items: center;
 }
 .footer__links:nth-of-type(2) {
@@ -651,6 +651,11 @@ button {
   color: #343A43;
   font-size: 15px;
   line-height: 1.2;
+}
+@media only screen and (min-width: 1024px) {
+  .footer__links a, .footer__links p {
+    white-space: nowrap;
+  }
 }
 .footer__links a:not([href^="tel:"]):not([href^="mailto:"]) {
   text-decoration: underline;
@@ -711,9 +716,6 @@ button {
   display: block;
 }
 .sidebar__link svg {
-  display: none;
-}
-.sidebar__link svg.mob {
   display: block;
 }
 @media only screen and (min-width: 1025px) {
@@ -728,16 +730,11 @@ button {
   .sidebar__link:last-of-type {
     display: none;
   }
-  .sidebar__link svg {
-    display: block;
-  }
-  .sidebar__link svg.mob {
-    display: none;
-  }
 }
 .sidebar__link:hover, .sidebar__link.active {
   color: #03010F;
   background-color: #fff;
+  box-shadow: 0px 0px 8px 0px rgba(221, 221, 221, 0.25);
 }
 .top-notice {
   background-color: rgb(254, 242, 218);
@@ -794,6 +791,11 @@ button {
   gap: 12px;
   width: 100%;
 }
+@media only screen and (max-width: 560px) {
+  .top-notice__top {
+    display: none;
+  }
+}
 .top-notice__top--icon {
   display: none;
   align-items: center;
@@ -825,7 +827,8 @@ button {
 .top-notice.active .top-notice__head svg {
   transform: rotate(180deg);
 }
-.top-notice.active .top-notice__content {
+.top-notice.active .top-notice__content,
+.top-notice.active .top-notice__top {
   display: flex;
 }
 
@@ -1634,6 +1637,7 @@ button {
   letter-spacing: 0.6px;
   box-sizing: border-box;
   margin-bottom: 16px;
+  height: 46px;
 }
 .finance__refill--list {
   display: flex;
@@ -1782,6 +1786,7 @@ button {
   line-height: 1.4;
   font-weight: 700;
   letter-spacing: 1px;
+  font-family: "GothamPro-Medium";
 }
 @media only screen and (max-width: 1025px) {
   .verification__title {
@@ -1793,7 +1798,6 @@ button {
   line-height: 1.2;
   text-transform: uppercase;
   color: #6B7078;
-  margin-top: 12px;
 }
 .verification__start {
   margin: 24px 0;
@@ -1887,7 +1891,7 @@ button {
   margin-top: 24px;
 }
 .verification__policy svg {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .verification__policy a {
   color: #14B890;
@@ -1919,6 +1923,7 @@ button {
   width: 232px;
   color: #B5B8BC;
   margin: 0;
+  border-radius: 8px;
 }
 .verification__input:focus {
   color: #03010F;
@@ -1946,6 +1951,9 @@ button {
   padding-bottom: 20px;
   border-top: 1px solid #E2E4E4;
 }
+.verification__person h3 {
+  margin: unset;
+}
 .verification__person--form {
   gap: 20px;
   display: grid;
@@ -1965,6 +1973,7 @@ button {
   font-size: 14px;
   letter-spacing: 0.6px;
   box-sizing: border-box;
+  height: 46px;
 }
 .verification__person--item input:focus, .verification__person--item select:focus {
   color: #03010F;
@@ -2009,6 +2018,7 @@ button {
 }
 .verification__person--item.radio.long div ul {
   padding-left: 16px;
+  margin: 4px 0;
 }
 .verification__person--item.radio.long div ul li {
   color: #6B7078;

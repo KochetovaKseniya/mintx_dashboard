@@ -24,6 +24,7 @@
         line-height: 1.4;
         font-weight: 700;
         letter-spacing: 1px;
+        font-family: 'GothamPro-Medium';
         @include response(1025px) {
             font-size: 22px;    
         }
@@ -33,7 +34,7 @@
         line-height: 1.2;
         text-transform: uppercase;
         color: $gray2;
-        margin-top: 12px;
+        // margin-top: 12px;
     }
     &__start {
         margin: 24px 0;
@@ -125,7 +126,7 @@
         align-items: center;
         margin-top: 24px;
         svg {
-            margin-right: 10px;
+            margin-right: 5px;
         }
         a {
             color: $green;
@@ -156,6 +157,7 @@
         width: 232px;
         color: $gray3;
         margin: 0;
+        border-radius: 8px;
         &:focus {
             color: $black;
             border-color: $gray2;
@@ -182,6 +184,9 @@
         padding-top: 20px;
         padding-bottom: 20px;
         border-top: 1px solid #E2E4E4;
+        h3 {
+            margin: unset;
+        }
         &--form {
             gap: 20px;
             display: grid;
@@ -200,6 +205,7 @@
                 font-size: 14px;
                 letter-spacing: 0.6px;
                 box-sizing: border-box;
+                height: 46px;
                 &:focus {
                     color: $black;
                     border-color: $gray2;
@@ -243,6 +249,7 @@
                         flex-direction: column;
                         ul {
                             padding-left: 16px;
+                            margin: 4px 0;
                         }
                         ul li {
                             color: $gray2;

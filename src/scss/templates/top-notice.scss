@@ -50,6 +50,9 @@
         justify-content: space-between;
         gap: 12px;
         width: 100%;
+        @include response(560px) {
+            display: none;
+        }
         @include response-min(1024px) {
         }
         &--icon {
@@ -79,7 +82,8 @@
         .top-notice__head svg {
             transform: rotate(180deg);
         }
-        .top-notice__content {
+        .top-notice__content,
+        .top-notice__top {
             display: flex;
         }
     }

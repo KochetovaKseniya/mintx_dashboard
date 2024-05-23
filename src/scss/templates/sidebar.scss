@@ -53,10 +53,7 @@
             display: block;
         }
         svg {
-            display: none;
-            &.mob {
-                display: block;
-            }
+            display: block;
         }
         @include response-min(1025px) {
             display: flex;
@@ -68,18 +65,13 @@
             &:last-of-type {
                 display: none;
             }
-            svg {
-                display: block;
-                &.mob {
-                    display: none;
-                }
-            }
         }
 
         &:hover,
         &.active {
             color: $black;
             background-color: $white;
+            box-shadow: 0px 0px 8px 0px rgba(221, 221, 221, 0.25);
             @include response-min(1025px) {
 
             }

@@ -16,7 +16,7 @@
     &__links {
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        gap: 12px;
         align-items: center;
         &:nth-of-type(2) {
             flex-direction: column-reverse;
@@ -34,6 +34,9 @@
             color: $gray1;
             font-size: 15px;
             line-height: 1.2;
+            @include response-min(1024px) {
+                white-space: nowrap;
+            }
         }
         a:not([href^="tel:"]):not([href^="mailto:"]) {
             text-decoration: underline;
