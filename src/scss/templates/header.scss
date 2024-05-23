@@ -136,12 +136,15 @@
             a {
                 @include flexR();
                 color: #fff;
+                padding: 8px;
+                border-radius: 8px;
                 font-size: 14px;
                 line-height: 1;
                 gap: 8px;
                 text-decoration: unset;
+                transition: all 0.3s ease-in-out;
                 &:hover {
-                    color: $accent;
+                    background-color: #3A3A3A;
                 }
                 svg path {
                     stroke: #fff;
