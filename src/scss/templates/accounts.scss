@@ -28,6 +28,7 @@
         line-height: 1;
         white-space: nowrap;
         cursor: pointer;
+        font-weight: 600;
         @include response(760px) {
             order: 1;
         }
@@ -115,12 +116,12 @@
             height: 56px;
             .accounts__table--col {
                 font-size: 12px;
+                font-weight: 400;
             }
         }
         &--row {
             border-bottom: 1px solid #E2E4E4;
             box-sizing: border-box;
-            font-family: 'GothamPro-Medium', sans-serif;
             &:last-of-type {
                 border: unset
             }
@@ -133,6 +134,7 @@
             display: flex;
             align-items: center;
             box-sizing: border-box;
+            font-weight: 600;
             @include response(1024px) {
                 width: 120px;
                 &:last-of-type {
@@ -243,9 +245,9 @@
             line-height: 1.2;
             border-radius: 8px;
             width: 32px;
+            font-weight: 600;
             height: 32px;
             cursor: pointer;
-            font-family: 'GothamPro-Medium', sans-serif;
 
             &.active, 
             &:hover {

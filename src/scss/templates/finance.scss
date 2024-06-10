@@ -15,6 +15,7 @@
             align-items: center;
             justify-content: center;
             border: 1px solid $gray4;
+            font-weight: 600;
             color: $gray2;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
@@ -173,6 +174,7 @@
             font-size: 14px;
             line-height: 1.2;
             color: #03010F;
+            font-weight: 600;
         }
 
         &--input {
@@ -186,6 +188,7 @@
             box-sizing: border-box;
             margin-bottom: 16px;
             height: 46px;
+            font-family: "Wix Madefor Display", sans-serif;
         }
         &--list {
             display: flex;
@@ -206,6 +209,7 @@
             border: 2px solid #E2E4E4;
             cursor: pointer;
             position: relative;
+            font-weight: 600;
             @include response(1025px) {
                 width: 100%;
             }
@@ -224,6 +228,9 @@
                     width: 20px;
                     height: 20px;
                 }
+            }
+            p{
+                font-weight: 600;
             }
         }
         &--btn {

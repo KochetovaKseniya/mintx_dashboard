@@ -39,7 +39,9 @@
         color: $black;
         flex-grow: 1;
         font-weight: 600;
-        font-family: 'GothamPro-Medium', sans-serif;
+        // font-family: 'GothamPro-Medium', sans-serif;
+        font-family: 'Wix Madefor Display', sans-serif;
+
 
         @include response-min(1024px) {
         }

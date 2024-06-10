@@ -2,6 +2,9 @@
     p {
         color: #6B7078;
     }
+    h2 {
+        font-weight: 700;
+    }
     &--wrapper {
         display: flex;
         align-items: center;
@@ -40,6 +43,7 @@
         &-price {
             font-size: 20px;
             position: relative;
+            font-weight: 700;
             span {
                 font-size: 48px;
                 font-weight: 600;
@@ -75,6 +79,7 @@
         transition: all 0.3s ease-in-out;
         position: relative;
         cursor: pointer;
+        font-weight: 600;
         span {
             margin-right: 8px;
             color: #fff;

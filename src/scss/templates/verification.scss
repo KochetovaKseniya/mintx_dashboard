@@ -22,9 +22,8 @@
     &__title {
         font-size: 24px;
         line-height: 1.4;
+        font-family: 'Wix Madefor Display', sans-serif;
         font-weight: 700;
-        letter-spacing: 1px;
-        font-family: 'GothamPro-Medium';
         @include response(1025px) {
             font-size: 22px;    
         }
@@ -34,7 +33,7 @@
         line-height: 1.2;
         text-transform: uppercase;
         color: $gray2;
-        // margin-top: 12px;
+        letter-spacing: 1px;
     }
     &__start {
         margin: 24px 0;
@@ -76,7 +75,6 @@
             font-size: 14px;
             line-height: 1.5;
             gap: 4px;
-            letter-spacing: 0.5px;
             p, h3, ul {
                 margin: unset;
                 color: $black;
@@ -90,7 +88,7 @@
                 align-items: center;
                 font-size: 16px;
                 line-height: 1.5;
-                font-weight: 500;
+                font-weight: 600;
                 svg {
                     margin-right: 10px;
                 }
@@ -143,7 +141,7 @@
         p {
             color: $black;
             font-size: 14px;
-            line-height: 1;
+            line-height: 1.2;
             @include response(1025px) {
                 max-width: 320px;
             }
@@ -166,7 +164,6 @@
     &__btn {
         width: 100%;
         font-weight: 600;
-        letter-spacing: 0.7px;
         font-size: 15px;
         line-height: 1;
     }
@@ -206,6 +203,7 @@
                 letter-spacing: 0.6px;
                 box-sizing: border-box;
                 height: 46px;
+                font-family: "Wix Madefor Display", sans-serif;
                 &:focus {
                     color: $black;
                     border-color: $gray2;
@@ -220,7 +218,7 @@
                 background-repeat: no-repeat;
             }
             label {
-                font-size: 10px;
+                font-size: 12px;
                 line-height: 1;
                 color: $gray2;
                 margin-left: 8px;

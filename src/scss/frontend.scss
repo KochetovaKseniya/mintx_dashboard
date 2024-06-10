@@ -23,8 +23,7 @@ body {
     min-width: 320px;
     position: relative;
     overflow-x: hidden; 
-    font-family: 'GothamPro', sans-serif;
-
+    font-family: 'Wix Madefor Display', sans-serif;
 }
 
 .container {
@@ -65,12 +64,13 @@ button {
     transition: all 0.3s ease-in-out;
     font-weight: 400;
     min-width: 147px;
-    height: 47px;
+    height: 40px;
     border-radius: 8px;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 600;
     background-color: transparent;
-    font-family: 'GothamPro-Medium', sans-serif;
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-weight: 600;
     &:hover {
         color: $accent;
     }
@@ -95,7 +95,8 @@ button {
         height: 47px;
         font-weight: 400;
         border-radius: 8px;
-        font-family: 'GothamPro-Medium', sans-serif;
+        font-family: 'Wix Madefor Display', sans-serif;
+
         &:hover {
             background: linear-gradient(122.94deg, #27E8B9 -19.67%, #14B890 104.38%);
             color: $black;
@@ -201,11 +202,14 @@ input {
     }
 }
 
-h1,h2,h3,h4,h5, h6, .accounts__title,
-.accounts__content--title, .reviews__item--title, .reviews__item--num, .reviews__last p,
+h1,h2,h3,h4,h5, h6, .reviews__item--num, .reviews__last p,
 .accounts__item,
-.trading-accounts__name, .finance__content.empty p, .refill-ok__item--name, .refill-ok__item--price, 
+.trading-accounts__name, .finance__content.empty p, .refill-ok__item--name,
 .conditions__bottom p, .conditions__benefits--item p, .conditions__text h4,
-.conditions__referal--title, .partners__calc p, .partners__calc--reward-price {
-    font-family: 'GothamPro-Medium', sans-serif;
+.conditions__referal--title,  .partners__calc--reward-price {
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-weight: 600;
+}
+input {
+    font-family: "Wix Madefor Display", sans-serif;
 }
